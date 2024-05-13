@@ -14,7 +14,8 @@ export class SharedOrmLibraryModule {
         password: process.env.DATABASE_PASSWORD,
         database: process.env.DATABASE_NAME,
         synchronize: true,
-        entities: ['dist/**/*.entity{ .ts,.js}'],
+        logging: true, 
+        entities: [User, Settings],
       }
     }
     return {
